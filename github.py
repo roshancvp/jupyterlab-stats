@@ -32,5 +32,14 @@ req_json = req.json()
 print("\n\n******* Printing Issues *******\n")
 for x in range(len(req_json)):
     print("User         : " + str(req_json[x]["user"]["login"]) + "\n"
-        + "Issue number : " + str(req_json[x]["number"]) + "\n" +
+        + "Issue number : " + str(req_json[x]["number"]) + "\n"
         + "Title        : " + str(req_json[x]["title"]) + "\n")
+
+# Commmits
+req = requests.get(BASE + "/commits")
+req_json = req.json()
+
+print("\n\n******* Printing Commits *******\n")
+for x in range(len(req_json)):
+    print("Author  : " + str(req_json[x]["commit"]["author"]["name"]) + "\n"
+        + "Message : " + str(req_json[x]["commit"]["message"]) + "\n")
