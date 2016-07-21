@@ -3,6 +3,10 @@ body {
   background-color: black;
 }
 
+h1 {
+  border-bottom: 2px solid white;
+}
+
 .top {
   margin-top: 50px;
   font-size: 32px;
