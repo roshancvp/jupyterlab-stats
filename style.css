@@ -37,16 +37,9 @@ h1 {
   color: #FF3D00;
 }
 
-.pull-request {
-  display: block;
-  background-image: url(pull-request.png);
-  min-height: 100px;
-  min-width: 100px;
-}
-
 #gitter {
   height: 700px;
-  width: 600px;
+  width: 400px;
   border: none;
   align-self: center;
   border-radius: 20px;
