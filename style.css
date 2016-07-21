@@ -1,7 +1,6 @@
 body {
   color: white;
   background-color: black;
-  border: 1px solid red;
 }
 
 .top {
@@ -39,7 +38,6 @@ body {
   background-image: url(pull-request.png) repeat;
   min-height: 100px;
   min-width: 100px;
-  border: 2px solid red;
 }
 
 #gitter {
