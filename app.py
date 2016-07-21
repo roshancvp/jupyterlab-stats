@@ -1,10 +1,12 @@
 from flask import Flask, request, render_template
+from github import *
 
 app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return render_template("index.html")
+    gh = Github()
+    return render_template("index.html", stars = gh.stars, forks = gh.forks)
 
 # # Routing with a string
 # @app.route('/user/<profile>')
