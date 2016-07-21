@@ -23,16 +23,16 @@ $(document).ready(function(){
     $("#forks").text(jsonData.forks_count)
     $("#issues").text(jsonData.open_issues_count)
 
-    // Last Issue
-    var requestIssues = new XMLHttpRequest();
+    // Last PR
+    var requestPR = new XMLHttpRequest();
     requestIssues.open("GET", BASE + "/issues", false);
     requestIssues.send();
 
-    var jsonIssues = JSON.parse(requestIssues.responseText);
-    console.log(jsonIssues)
-    $("#last_issue_1").text(jsonIssues[0].title);
-    $("#last_issue_2").text(jsonIssues[1].title);
-    $("#last_issue_3").text(jsonIssues[2].title);
+    var jsonPR = JSON.parse(requestIssues.responseText);
+    console.log(jsonPR)
+    $("#last_issue_1").text(jsonPR[0].title);
+    $("#last_issue_2").text(jsonPR[1].title);
+    $("#last_issue_3").text(jsonPR[2].title);
   }, 60000)
 
 });
