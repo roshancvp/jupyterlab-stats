@@ -35,7 +35,7 @@ body {
 
 .pull-request {
   display: block;
-  background-image: url(pull-request.png) repeat;
+  background-image: url(pull-request.png);
   min-height: 100px;
   min-width: 100px;
 }
@@ -46,5 +46,5 @@ body {
   border: none;
   align-self: center;
   border-radius: 20px;
-  box-shadow: 0px 0px 45px 2px #B2EBF2;
+  box-shadow: 0px 0px 10px 5px purple;
 }
