@@ -2,6 +2,10 @@ var BASE = "https://api.github.com/repos/jupyter/jupyterlab";
 
 console.log("Starting...")
 
+var prevStars;
+var prevForks;
+var prevIssues;
+
 $(document).ready(function(){
 
   pullChanges()
@@ -27,10 +31,31 @@ var pullChanges = function() {
   requestData.open("GET", BASE, false);
   requestData.send();
 
-  var jsonData = JSON.parse(requestData.responseText)
-  $("#stars").text(jsonData.stargazers_count)
-  $("#forks").text(jsonData.forks_count)
-  $("#issues").text(jsonData.open_issues_count)
+  var jsonData = JSON.parse(requestData.responseText);
+  var stars = parseInt(jsonData.stargazers_count);
+  var forks = parseInt(jsonData.forks_count);
+  var issues = parseInt(jsonData.open_issues_count);
+
+  $("#stars").text(stars);
+  $("#forks").text(forks);
+  $("#issues").text(issues);
+
+  // Notification Stuff
+  if (prevStars == null || prevForks == null || prevIssues == null) {
+    prevStars = stars;
+    prevForks = forks;
+    prevIssues = issues;
+  }
+
+  // Check Stars
+  if (prevStars < stars) {
+    $('#notif').text("NEW STAR :D");
+    prevStars = stars;
+  } else if (prevStars > stars) {
+    $('#notif').text("LOST STAR :(");
+    prevStars = stars;
+  }
+
 
   // Last PR
   var requestPR = new XMLHttpRequest();
