@@ -1,0 +1,14 @@
+body {
+  color: white;
+  background-color: black;
+}
+
+.top {
+  margin-top: 32px;
+  font-size: 32px;
+}
+
+.icons {
+  margin-top: 32px;
+  font-size: 72px;
+}
