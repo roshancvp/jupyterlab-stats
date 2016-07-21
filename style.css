@@ -1,15 +1,24 @@
 body {
   color: white;
   background-color: black;
+  border: 1px solid red;
 }
 
 .top {
-  margin-top: 32px;
+  margin-top: 50px;
   font-size: 32px;
 }
 
+.bottom {
+  padding-top: 50px;
+}
+
+.container {
+  width: 1500px;
+}
+
 .icons {
-  margin-top: 32px;
+  margin-top: 50px;
   font-size: 72px;
 }
 
@@ -23,4 +32,21 @@ body {
 
 .fa-exclamation-circle {
   color: #FF3D00;
+}
+
+.pull-request {
+  display: block;
+  background-image: url(pull-request.png) repeat;
+  min-height: 100px;
+  min-width: 100px;
+  border: 2px solid red;
+}
+
+#gitter {
+  height: 800px;
+  width: 600px;
+  border: none;
+  align-self: center;
+  border-radius: 20px;
+  box-shadow: 0px 0px 45px 2px #B2EBF2;
 }
