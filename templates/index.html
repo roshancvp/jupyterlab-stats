@@ -1,23 +1,29 @@
 <!DOCTYPE html>
 <html>
-
-    <head>
-        <title>JupyterLab Github Visualizer</title>
-        <link rel="stylesheet" type="text/css" href="index.css">
-    </head>
+<head>
+  <title>JupyterLab Stats</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'style.css') }}">
+</head>
 <body>
-    <div id="main">
-        <div class="title">
-            <img src="title-logo.png">
-        </div>
-        <div>
-            <div id="info-button">
-                <img class="star" src="star.png">
-                <div id="numStars">        
-                    <p>{{starCount}}</p>
-                </div>
-            </div>
-        </div>
+<div class="container">
+
+  <div class="top text-center">
+  <img src="{{ url_for('static', filename = 'logo.svg') }}" style="height: 64px;">
+  <br>at Cal Poly
+  </div>
+
+  <div class="row icons text-center">
+    <div class="stars col-md-6">
+      <i class="fa fa-star" aria-hidden="true"></i> 673
     </div>
+    <div class="col-md-6">
+      <i class="fa fa-code-fork" aria-hidden="true"></i> 84
+    </div>
+  </div>
+
+</div>
 </body>
 </html>
