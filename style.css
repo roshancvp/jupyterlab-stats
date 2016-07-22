@@ -1,6 +1,11 @@
 body {
-  color: white;
-  background-color: black;
+  font-family: 'Myriad Pro', 'Helvetica Neue', 'Arial', sans-serif;
+  color: #616161;
+  background-color: #E4E4E4;
+}
+
+.container {
+  min-width: 1800px;
 }
 
 h1 {
@@ -23,25 +28,42 @@ h3 {
   padding-top: 50px;
 }
 
-.container {
-  width: 1500px;
-}
-
 .icons {
   margin-top: 50px;
   font-size: 72px;
 }
 
 .fa-star {
-  color: #FFFF00;
+
 }
 
 .fa-code-fork {
-  color: #039BE5;
+
 }
 
 .fa-exclamation-circle {
-  color: #FF3D00;
+
+}
+
+h1 {
+  font-weight: 100;
+  font-size: 64px;
+}
+
+/*Issues Section*/
+#last-issue {
+  font-weight: 200;  
+}
+
+.issue-icon {
+  color: #66BB6A;
+}
+
+/* Global */
+.card-icon {
+  padding-top: 12px;
+  padding-left: 22px;
+  font-size: 36px;
 }
 
 #gitter {
