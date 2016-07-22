@@ -22,11 +22,10 @@ var pullChanges = function() {
   var requestPulls = new XMLHttpRequest();
   requestPulls.open("GET", BASE + "/pulls", false);
   requestPulls.send();
-
-  // Stargazers + Issues + Forks
   var jsonPulls = JSON.parse(requestPulls.responseText)
   $('#pull').text(jsonPulls.length)
 
+  // Stargazers + Issues + Forks
   var requestData = new XMLHttpRequest();
   requestData.open("GET", BASE, false);
   requestData.send();
@@ -50,9 +49,6 @@ var pullChanges = function() {
   // Check Stars
   if (prevStars < stars) {
     $('#notif').text("NEW STAR :D");
-    $(".fa-star").animate({
-      height: '150px',
-    });
     prevStars = stars;
   } else if (prevStars > stars) {
     $('#notif').text("LOST STAR :(");
@@ -60,13 +56,29 @@ var pullChanges = function() {
   }
 
 
-  // Last PR
+  // Notifications
   var requestPR = new XMLHttpRequest();
   requestPR.open("GET", BASE + "/issues", false);
   requestPR.send();
 
   var jsonPR = JSON.parse(requestPR.responseText);
-  console.log(jsonPR)
+  $('.cards-notif').prepend('
+  <div class="card">
+    <div class="row">
+      <!-- Icon -->
+      <div class="col-md-1 issue-icon card-icon">
+        <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+      </div>
+      <!-- Message -->
+      <div class="col-md-11">
+        <h2 id="last-issue">Make editor toggle settings only work when an editor is actively focused</h2>
+      </div>
+    </div> 
+  </div>                      
+  ');
+
+
+
   $("#last_issue_1").text(jsonPR[0].title);
   $("#last_issue_2").text(jsonPR[1].title);
   $("#last_issue_3").text(jsonPR[2].title);

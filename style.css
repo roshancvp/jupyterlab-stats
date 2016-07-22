@@ -39,6 +39,22 @@ h1 {
   font-size: 64px;
 }
 
+/*Issues Section*/
+#last-issue {
+  font-weight: 200;  
+}
+
+.issue-icon {
+  color: #66BB6A;
+}
+
+/* Global */
+.card-icon {
+  padding-top: 12px;
+  padding-left: 22px;
+  font-size: 36px;
+}
+
 .pull-request {
   display: block;
   background-image: url(pull-request.png);

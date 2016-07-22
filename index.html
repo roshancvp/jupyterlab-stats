@@ -11,7 +11,7 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/octicons/3.5.0/octicons.css" rel="stylesheet" crossorigin="anonymous">
   <!-- Custom -->  
   <link rel="stylesheet" type="text/css" href="style.css">
-  
+  <script src="app.js"></script>
 </head>
 <body>
 <div class="container">
@@ -19,6 +19,7 @@
   <!--Top level logo-->
   <img class="top" src="logo.svg" style="height: 100px;">
 
+  <!--Top level Icons -->
   <div class="row icons text-center">
     <div class="col-md-3">
       <i class="fa fa-star" aria-hidden="true"></i> <span id="stars"></span>
@@ -38,20 +39,33 @@
 
   <div class="row bottom">
 
-    <div class="col-md-4 last_issue">
+    <!-- Activity -->
+    <div class="col-md-4">
       <h1>Activity</h1>
-      <h2 id="last_issue_1">Loading...</h2>
-      <h2 id="last_issue_2">Loading...</h2>
-      <h2 id="last_issue_3">Loading...</h2>
+      <!--Card-->
+      <div class="cards-notif"></div>
+      <div class="card">
+        <div class="row">
+          <!-- Exclamation icon -->
+          <div class="col-md-1 issue-icon card-icon">
+            <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+          </div>
+          <!-- Message -->
+          <div class="col-md-11">
+            <h2 id="last-issue">Make editor toggle settings only work when an editor is actively focused</h2>
+          </div>
+        </div> 
+      </div>
     </div>
 
+    <!-- Notifications -->
     <div class="col-md-4 PR">
         <h1>Notifications</h1>
-        <h2 id="notif">Nothing new</h2>
     </div>
 
+    <!-- Gitter -->
     <div class="col-md-4 pull-right gitter">
-      <iframe id="gitter" src="https://gitter.im/jupyter/jupyterlab/~embed" align="right"></iframe>
+    
     </div>
 
   </div>
