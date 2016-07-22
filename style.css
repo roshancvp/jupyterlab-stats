@@ -29,7 +29,8 @@ body {
   padding: 0;
 }
 .icon {
-  margin-top: 22px
+  margin-top: 22px;
+  text-align: center;
 }
 
 .icon > img{
@@ -45,6 +46,20 @@ body {
 h1 {
   font-weight: 200;
   font-size: 53px;
+}
+.PR > h1 {
+  padding: 25px 0 4px 50px;
+  margin: 0;
+  border-bottom-style: solid;
+  border-bottom-width: 5px;
+  border-bottom-color: #A7A4FF;
+}
+.issues > h1 {
+  padding: 25px 0 4px 50px;
+  margin: 0;
+  border-bottom-style: solid;
+  border-bottom-width: 5px;
+  border-bottom-color: #FFA4A4;
 }
 
 /*Issues Section*/
@@ -66,36 +81,23 @@ h1 {
   margin-top: -25px;
 }
 
-#last-issue {
-  font-weight: 200;  
-}
-
-.pull-request {
-  display: block;
-  background-image: url(pull-request.png);
-  min-height: 100px;
-  min-width: 100px;
-}
-
 #gitter {
   height: 950px;
   width: 100%;
   border: none;
   align-self: center;
-    padding: 0;
-    margin: 0;
+  padding: 0;
+  margin: 0;
 }
 
 .content {
     margin: 0 20px 0 20px;
 }
 
-h2 {
-  font-family: 'Helvetica Neue';
+.card {
   font-weight: 200;
   background-color: white;
-  padding: 15px;
-  height: 100px;
+  padding: 10px;
   margin: 10px;
   border-radius: 5px;
   font-size: 20px;

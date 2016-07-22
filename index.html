@@ -3,59 +3,57 @@
 <head>
   <title>JupyterLab Stats</title>
   <script src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/octicons/3.5.0/octicons.css" rel="stylesheet" crossorigin="anonymous">
+
   <!-- Custom -->  
   <link rel="stylesheet" type="text/css" href="style.css">
   <script src="app.js"></script>
 </head>
+
 <body>
-<div class="container">  
-  <div class="row header">
-    <div class="col-md-3 logo">
-      <img src="images/logo.svg" style="height: 100px;">
-    </div>
-    <div class="col-md-2 icon">
-      <img src="images/star.svg"/> <span id="pull">0</span>
-    </div>
-    <div class="col-md-2 icon">
-      <img src="images/repo-forked.svg"/> <span id="pull">0</span>
-    </div>
-    <div class="col-md-2 icon">
-      <img src="images/issue-opened.svg"/> <span id="pull">0</span>
-    </div>
-    <div class="col-md-2 icon">
-      <img src="images/git-pull-request.svg"/> <span id="pull">0</span>
-    </div>
-  </div>
+    <div class="container">  
+      <div class="row header">
+        <div class="col-md-4 logo">
+          <img src="images/logo.svg" style="height: 100px;">
+        </div>
+        <div class="col-md-2 icon">
+          <img src="images/star.svg"/> <span id="stars">0</span>
+        </div>
+        <div class="col-md-2 icon">
+          <img src="images/repo-forked.svg"/> <span id="forks">0</span>
+        </div>
+        <div class="col-md-2 icon">
+          <img src="images/issue-opened.svg"/> <span id="issues">0</span>
+        </div>
+        <div class="col-md-2 icon">
+          <img src="images/git-pull-request.svg"/> <span id="pull">0</span>
+        </div>
+      </div>
 
 
 
-  <div class="row bottom">
+      <div class="row bottom">
 
-    <!-- Activity -->
-    <div class="col-md-4">
-      <h1>Activity</h1>
-      <div class="cards-activity"></div>
+        <!-- Pull Requests -->
+        <div class="col-md-4 PR">
+            <h1>Pull Requests</h1>
+            <div class="cards-pulls"></div>
+        </div>
+
+        <!-- Issues -->
+        <div class="col-md-4 issues">
+          <h1>Issues</h1>
+          <div class="cards-activity"></div>
+        </div>
+
+        <!-- Gitter -->
+        <div class="col-md-4 pull-right gitter">
+            <iframe id="gitter" src="https://gitter.im/jupyter/jupyterlab/~embed" align="right"></iframe>
+        </div>
+
+      </div>
+
     </div>
-
-    <!-- Pull Requests -->
-    <div class="col-md-4 PR">
-        <h1>Pull Requests</h1>
-        <div class="cards-pulls"></div>
-    </div>
-
-    <!-- Gitter -->
-    <div class="col-md-4 pull-right gitter">
-    
-    </div>
-
-  </div>
-
-</div>
 </body>
 </html>
