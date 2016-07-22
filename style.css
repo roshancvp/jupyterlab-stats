@@ -1,42 +1,50 @@
+.col-md-3, .col-md-4, .col-md-2{
+    padding: 0;
+    margin: 0;
+}
+
 body {
-  font-family: 'Myriad Pro', 'Helvetica Neue', 'Arial', sans-serif;
+  font-family: "Myriad Pro", 'Helvetica Neue', 'Arial', sans-serif;
   color: #616161;
   background-color: #E4E4E4;
 }
-
+.logo {
+    margin: 0px;
+}
+.logo > img {
+    height: 90px;
+}
 .container {
-  min-width: 1800px;
+  min-width: 100%;
+  margin: 0;
+  padding: 0;
 }
-
-.top {
-  margin-top: 50px;
-  font-size: 32px;
+.header {
+  padding: 20px 40px 20px 40px;
+  background-color: #D8D8D8;
+  margin: 0;
 }
-
 .bottom {
-  padding-top: 50px;
+  margin: 0;
+  padding: 0;
+}
+.icon {
+  margin-top: 22px
 }
 
-.icons {
-  margin-top: 50px;
-  font-size: 72px;
+.icon > img{
+  height: 50px;
+  margin-top: -20px;
 }
 
-.fa-star {
-
-}
-
-.fa-code-fork {
-
-}
-
-.fa-exclamation-circle {
-
+.icon > span {
+  font-size: 40px;
+  margin-left: 16px;
 }
 
 h1 {
-  font-weight: 100;
-  font-size: 64px;
+  font-weight: 200;
+  font-size: 53px;
 }
 
 /*Issues Section*/
@@ -70,10 +78,32 @@ h1 {
 }
 
 #gitter {
-  height: 700px;
-  width: 600px;
+  height: 950px;
+  width: 100%;
   border: none;
   align-self: center;
-  border-radius: 20px;
-  box-shadow: 0px 0px 10px 5px purple;
+    padding: 0;
+    margin: 0;
 }
+
+.content {
+    margin: 0 20px 0 20px;
+}
+
+h2 {
+  font-family: 'Helvetica Neue';
+  font-weight: 200;
+  background-color: white;
+  padding: 15px;
+  height: 100px;
+  margin: 10px;
+  border-radius: 5px;
+  font-size: 20px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+.prs > .content > h2 {
+  background-color: #868C97;
+  color: white;
+}
+

@@ -14,24 +14,22 @@
   <script src="app.js"></script>
 </head>
 <body>
-<div class="container">
-
-  <!--Top level logo-->
-  <img class="top" src="logo.svg" style="height: 100px;">
-
-  <!--Top level Icons -->
-  <div class="row icons text-center">
-    <div class="col-md-3">
-      <i class="fa fa-star" aria-hidden="true"></i> <span id="stars"></span>
+<div class="container">  
+  <div class="row header">
+    <div class="col-md-3 logo">
+      <img src="images/logo.svg" style="height: 100px;">
     </div>
-    <div class="col-md-3">
-      <i class="fa fa-code-fork" aria-hidden="true"></i> <span id="forks"></span>
+    <div class="col-md-2 icon">
+      <img src="images/star.svg"/> <span id="pull">0</span>
     </div>
-    <div class="col-md-3">
-      <i class="fa fa-exclamation-circle" aria-hidden="true"></i> <span id="issues"></span>
+    <div class="col-md-2 icon">
+      <img src="images/repo-forked.svg"/> <span id="pull">0</span>
     </div>
-    <div class="col-md-3">
-      <img src="pull-request.png" style="height: 72px; padding-bottom: 5px" /> <span id="pull"></span>
+    <div class="col-md-2 icon">
+      <img src="images/issue-opened.svg"/> <span id="pull">0</span>
+    </div>
+    <div class="col-md-2 icon">
+      <img src="images/git-pull-request.svg"/> <span id="pull">0</span>
     </div>
   </div>
 
