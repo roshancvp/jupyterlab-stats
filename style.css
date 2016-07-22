@@ -40,9 +40,6 @@ h1 {
 }
 
 /*Issues Section*/
-#last-issue {
-  font-weight: 200;  
-}
 
 .issue-icon {
   color: #66BB6A;
@@ -53,6 +50,16 @@ h1 {
   padding-top: 12px;
   padding-left: 22px;
   font-size: 36px;
+}
+
+.card-user {
+  font-weight: 200;
+  color: #878787;
+  margin-top: -25px;
+}
+
+#last-issue {
+  font-weight: 200;  
 }
 
 .pull-request {

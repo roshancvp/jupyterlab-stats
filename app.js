@@ -55,32 +55,37 @@ var pullChanges = function() {
     prevStars = stars;
   }
 
-
   // Notifications
   var requestPR = new XMLHttpRequest();
   requestPR.open("GET", BASE + "/issues", false);
   requestPR.send();
 
   var jsonPR = JSON.parse(requestPR.responseText);
-  $('.cards-notif').prepend('
-  <div class="card">
-    <div class="row">
-      <!-- Icon -->
-      <div class="col-md-1 issue-icon card-icon">
-        <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+  //var lastPR = parseInt(jsonPR[0] == )
+  //if(jsonPR[0])
+  
+  for (x = 6; x >= 0; x--) {
+    $('.cards-notif').prepend(createCard(jsonPR[x].title, jsonPR[x].user.login));    
+  }
+
+
+
+}
+
+var createCard = function(text, user) {
+  var htmlText = `
+    <div class="card">
+      <div class="row">
+        <!-- Icon -->
+        <div class="col-md-1 issue-icon card-icon">
+          <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+        </div>
+        <!-- Message -->
+        <div class="col-md-11">
+          <h2 id="last-issue">` + text + `</h2><br>
+          <h3 class="card-user">` + user + `</h3>
+        </div>
       </div>
-      <!-- Message -->
-      <div class="col-md-11">
-        <h2 id="last-issue">Make editor toggle settings only work when an editor is actively focused</h2>
-      </div>
-    </div> 
-  </div>                      
-  ');
-
-
-
-  $("#last_issue_1").text(jsonPR[0].title);
-  $("#last_issue_2").text(jsonPR[1].title);
-  $("#last_issue_3").text(jsonPR[2].title);
-
+    </div>`;
+  return htmlText;
 }
