@@ -61,12 +61,23 @@ var pullChanges = function() {
   requestPR.send();
 
   var jsonPR = JSON.parse(requestPR.responseText);
-  //var lastPR = parseInt(jsonPR[0] == )
-  //if(jsonPR[0])
-  
-  for (x = 6; x >= 0; x--) {
+
+  // Works only if there is one new notification
+  var lastPRID;
+  if (lastPRID == null){
+    for (x = 5; x >= 0; x--) {
     $('.cards-notif').prepend(createCard(jsonPR[x].title, jsonPR[x].user.login));    
+    }
+    var lastPRID = jsonData[0].number
   }
+  
+  if(lastPRID != jsonData[0].number) {
+    $('.cards-notif').prepend(createCard(jsonPR[0].title, jsonPR[0].user.login));    
+    var lastPRID = jsonData[0].number
+  }
+  
+  
+  
 
 
 
