@@ -3,6 +3,10 @@ body {
   background-color: black;
 }
 
+h1 {
+  border-bottom: 2px solid white;
+}
+
 .top {
   margin-top: 50px;
   font-size: 32px;
@@ -31,13 +35,6 @@ body {
 
 .fa-exclamation-circle {
   color: #FF3D00;
-}
-
-.pull-request {
-  display: block;
-  background-image: url(pull-request.png);
-  min-height: 100px;
-  min-width: 100px;
 }
 
 #gitter {
