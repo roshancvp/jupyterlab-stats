@@ -68,6 +68,7 @@ var pullChanges = function() {
   if (prevStars < stars) {
     $('.cards-notif').prepend(createCard('New Star!'))
     prevStars = stars;
+    popup(stars);
   } else if (prevStars > stars) {
     $('#notif').text("LOST STAR :(");
     prevStars = stars;
