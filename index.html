@@ -15,18 +15,26 @@
 </head>
 <body>
 <div class="container">
+
+  <div class='wrap'>
+    <div class='content'>
+      <h4 id="stuff" class="hidden"></h4>
+    </div>
+  </div>
+
   <div class="row header">
     <div class="col-md-3 logo">
       <img src="images/logo.svg" style="height: 100px;">
     </div>
     <div class="col-md-2 icon">
-      <img src="images/star.svg"/> <span id="pull">0</span>
+      <a href="javascript:popup()">
+      <img src="images/star.svg"/> </a><span id="stars">0</span>
     </div>
     <div class="col-md-2 icon">
-      <img src="images/repo-forked.svg"/> <span id="pull">0</span>
+      <img src="images/repo-forked.svg"/> <span id="forks">0</span>
     </div>
     <div class="col-md-2 icon">
-      <img src="images/issue-opened.svg"/> <span id="pull">0</span>
+      <img src="images/issue-opened.svg"/> <span id="issues">0</span>
     </div>
     <div class="col-md-2 icon">
       <img src="images/git-pull-request.svg"/> <span id="pull">0</span>

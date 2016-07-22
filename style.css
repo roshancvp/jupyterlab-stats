@@ -8,6 +8,26 @@ body {
   color: #616161;
   background-color: #E4E4E4;
 }
+
+h2 {
+  font-family: 'Helvetica Neue';
+  font-weight: 200;
+  background-color: white;
+  padding: 15px;
+  height: 100px;
+  margin: 10px;
+  border-radius: 5px;
+  font-size: 20px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+h4 {
+  padding-top: 300px;
+  font-size: 84px;
+  color: #616161;
+  text-align: center;
+}
+
 .logo {
   margin: 0px;
 }
@@ -42,15 +62,104 @@ body {
   margin-left: 16px;
 }
 
-h1 {
-  font-weight: 200;
-  font-size: 53px;
-}
-
 /*Issues Section*/
 
 .issue-icon {
   color: #66BB6A;
+}
+
+/* Popup notification */
+
+.wrap {
+  z-index: 9999;
+  position: absolute;
+  overflow: hidden;
+  top: 10%;
+  right: 10%;
+  bottom: 85px;
+  left: 10%;
+  padding: 20px 50px;
+  display: block;
+  border-radius: 6px;
+  transform: translateY(20px);
+  transition: all 0.5s;
+  visibility: hidden;
+}
+
+.wrap .content {
+  opacity: 0;
+}
+
+.wrap:before {
+  z-index: 9999;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  background: white;
+  content: "";
+  bottom: 10px;
+  left: 50%;
+  top: 95%;
+  color: #fff;
+  border-radius: 50%;
+  -webkit-transition: all 600ms cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: all 600ms cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.wrap.active {
+  z-index: 9999;
+  display: block;
+  visibility: visible;
+  box-shadow: 2px 3px 16px silver;
+  transition: all 600ms;
+  transform: translateY(0px);
+  transition: all 0.5s;
+}
+
+.wrap.active:before {
+  z-index: 9999;
+  height: 2000px;
+  width: 2000px;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  margin-left: -1000px;
+  margin-top: -1000px;
+  display: block;
+  -webkit-transition: all 600ms cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: all 600ms cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.wrap.active .content {
+  position: relative;
+  z-index: 9999;
+  opacity: 1;
+  transition: all 600ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+a.button {
+  padding: 11px 11px 13px 13px;
+  outline: none;
+  border-radius: 50%;
+  background: #007fed;
+  color: #fff;
+  font-size: 24px;
+  display: block;
+  position: fixed;
+  left: 50%;
+  bottom: 20px;
+  top: auto;
+  margin-left: -25px;
+  text-decoration: none;
+  transition: transform 0.25s;
+}
+a.button:hover {
+  text-decoration: none;
+  background: #2198ff;
+}
+a.button.active {
+  transform: rotate(135deg);
+  transition: transform 0.5s;
 }
 
 /* Global */
@@ -88,18 +197,6 @@ h1 {
 
 .content {
   margin: 0 20px 0 20px;
-}
-
-h2 {
-  font-family: 'Helvetica Neue';
-  font-weight: 200;
-  background-color: white;
-  padding: 15px;
-  height: 100px;
-  margin: 10px;
-  border-radius: 5px;
-  font-size: 20px;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.15);
 }
 
 .prs > .content > h2 {
