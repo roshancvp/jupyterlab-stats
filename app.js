@@ -5,14 +5,19 @@ console.log("Starting...")
 var prevStars;
 var prevForks;
 var prevIssues;
+var lastPRID;
+var loopCount = 0;
 
 $(document).ready(function(){
 
-  pullChanges()
+  pullChanges();
+  console.log("YAAS");
 
   setInterval(function() {
     pullChanges();
-  }, 60000)
+    loopCount++;
+    console.log(loopCount);
+  }, 5000);
 
 });
 
@@ -67,17 +72,16 @@ var pullChanges = function() {
   var jsonPR = JSON.parse(requestPR.responseText);
 
   // Works only if there is one new notification
-  var lastPRID;
   if (lastPRID == null){
     for (x = 5; x >= 0; x--) {
     $('.cards-activity').prepend(createCard(jsonPR[x].title, jsonPR[x].user.login));    
     }
-    var lastPRID = jsonData[0].number;
+    lastPRID = jsonPR[0].number;
   } 
   
-  if(lastPRID != jsonData[0].number) {
+  if(lastPRID != jsonPR[0].number) {
     $('.cards-activity').prepend(createCard(jsonPR[0].title, jsonPR[0].user.login));    
-    var lastPRID = jsonData[0].number;
+    lastPRID = jsonPR[0].number;
   }
 
 }
