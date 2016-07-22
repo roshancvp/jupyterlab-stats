@@ -13,52 +13,60 @@
 
   <link rel="stylesheet" type="text/css" href="style.css">
   <script src="app.js"></script>
+  <script src="stars.js"></script>
 </head>
 <body>
-<div class="container">
+  <div class="container">
 
-  <div class="top text-center">
-  <img src="logo.svg" style="height: 64px;">
-  <br>at Cal Poly San Luis Obispo
-  </div>
-
-  <div class="row icons text-center">
-    <div class="col-md-3">
-      <i class="fa fa-star" aria-hidden="true"></i> <span id="stars"></span>
-    </div>
-    <div class="col-md-3">
-      <i class="fa fa-code-fork" aria-hidden="true"></i> <span id="forks"></span>
-    </div>
-    <div class="col-md-3">
-      <i class="fa fa-exclamation-circle" aria-hidden="true"></i> <span id="issues"></span>
-    </div>
-    <div class="col-md-3">
-      <img src="pull-request.png" style="height: 72px; padding-bottom: 5px" /> <span id="pull"></span>
-    </div>
-  </div>
-
-
-
-  <div class="row bottom">
-
-    <div class="col-md-3 last_issue">
-      <h1>Activity</h1>
-      <h2 id="last_issue_1">Loading...</h2>
-      <h2 id="last_issue_2">Loading...</h2>
-      <h2 id="last_issue_3">Loading...</h2>
+    <div class='wrap'>
+      <div class='content'>
+        <h3 id="stuff"></h3>
+      </div>
     </div>
 
-    <div class="col-md-3 pull-request">
-        <h1>Notifications</h1>
-        <h2 id="notif">Nothing new</h2>
+    <div class="top text-center">
+      <img src="logo.svg" style="height: 64px;">
+      <br>at Cal Poly San Luis Obispo
     </div>
 
-    <div class="col-md-6 pull-right gitter">
-      <iframe id="gitter" src="https://gitter.im/jupyter/jupyterlab/~embed" align="right">
-    </div>
+    <div class="row icons text-center">
+        <div class="col-md-3">
+          <a href="javascript:popup()">
+          <i class="fa fa-star" aria-hidden="true"></i></a> <span id="stars"></span>
+        </div>
+        <div class="col-md-3">
+          <i class="fa fa-code-fork" aria-hidden="true"></i> <span id="forks"></span>
+        </div>
+        <div class="col-md-3">
+          <i class="fa fa-exclamation-circle" aria-hidden="true"></i> <span id="issues"></span>
+        </div>
+        <div class="col-md-3">
+          <img src="pull-request.png" style="height: 72px; padding-bottom: 5px"/> <span id="pull" ></span>
+        </div>
+      </div>
 
-  </div>
 
-</div>
-</body>
-</html>
+
+      <div class="row bottom">
+
+        <div class="col-md-3 last_issue">
+          <h1>Activity</h1>
+          <h2 id="last_issue_1">Loading...</h2>
+          <h2 id="last_issue_2">Loading...</h2>
+          <h2 id="last_issue_3">Loading...</h2>
+        </div>
+
+        <div class="col-md-3 pull-request">
+          <h1>Notifications</h1>
+          <h2 id="notif">Nothing new</h2>
+        </div>
+
+        <div class="col-md-6 pull-right gitter">
+          <iframe id="gitter" src="https://gitter.im/jupyter/jupyterlab/~embed" align="right">
+          </div>
+
+        </div>
+
+      </div>
+    </body>
+    </html>
