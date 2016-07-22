@@ -39,7 +39,9 @@ var pullChanges = function() {
   $("#forks").text(forks);
   $("#issues").text(issues);
 
-  // Notification Stuff
+  /* End of Top Level Updates */
+  
+  // Notifications
   if (prevStars == null || prevForks == null || prevIssues == null) {
     prevStars = stars;
     prevForks = forks;
@@ -48,14 +50,16 @@ var pullChanges = function() {
 
   // Check Stars
   if (prevStars < stars) {
-    $('#notif').text("NEW STAR :D");
+    $('.cards-notif').prepend(createCard('New Star!'))
     prevStars = stars;
   } else if (prevStars > stars) {
     $('#notif').text("LOST STAR :(");
     prevStars = stars;
   }
+  
+  /* End of Notifications */
 
-  // Notifications
+  // Activity
   var requestPR = new XMLHttpRequest();
   requestPR.open("GET", BASE + "/issues", false);
   requestPR.send();
@@ -66,20 +70,15 @@ var pullChanges = function() {
   var lastPRID;
   if (lastPRID == null){
     for (x = 5; x >= 0; x--) {
-    $('.cards-notif').prepend(createCard(jsonPR[x].title, jsonPR[x].user.login));    
+    $('.cards-activity').prepend(createCard(jsonPR[x].title, jsonPR[x].user.login));    
     }
-    var lastPRID = jsonData[0].number
-  }
+    var lastPRID = jsonData[0].number;
+  } 
   
   if(lastPRID != jsonData[0].number) {
-    $('.cards-notif').prepend(createCard(jsonPR[0].title, jsonPR[0].user.login));    
-    var lastPRID = jsonData[0].number
+    $('.cards-activity').prepend(createCard(jsonPR[0].title, jsonPR[0].user.login));    
+    var lastPRID = jsonData[0].number;
   }
-  
-  
-  
-
-
 
 }
 
