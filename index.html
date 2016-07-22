@@ -9,45 +9,24 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/octicons/3.5.0/octicons.css" rel="stylesheet" crossorigin="anonymous">
-  <!-- Custom -->  
+  <!-- Custom -->
   <link rel="stylesheet" type="text/css" href="style.css">
   <script src="app.js"></script>
-  <script src="stars.js"></script>
 </head>
 <body>
+
   <div class="container">
-
-<<<<<<< HEAD
     <div class='wrap'>
-      <div class='content'>
-        <h3 id="stuff"></h3>
-      </div>
-=======
-  <!--Top level logo-->
-  <img class="top" src="logo.svg" style="height: 100px;">
-
-  <!--Top level Icons -->
-  <div class="row icons text-center">
-    <div class="col-md-3">
-      <i class="fa fa-star" aria-hidden="true"></i> <span id="stars"></span>
-    </div>
-    <div class="col-md-3">
-      <i class="fa fa-code-fork" aria-hidden="true"></i> <span id="forks"></span>
-    </div>
-    <div class="col-md-3">
-      <i class="fa fa-exclamation-circle" aria-hidden="true"></i> <span id="issues"></span>
->>>>>>> style
+      <h3 class="hidden" id="stuff"></h3>
     </div>
 
-    <div class="top text-center">
-      <img src="logo.svg" style="height: 64px;">
-      <br>at Cal Poly San Luis Obispo
-    </div>
+    <!--Top level logo-->
+    <img class="top" src="logo.svg" style="height: 100px;">
 
+    <!--Top level Icons -->
     <div class="row icons text-center">
-        <div class="col-md-3">
-          <a href="javascript:popup()">
-          <i class="fa fa-star" aria-hidden="true"></i></a> <span id="stars"></span>
+      <div class="col-md-3">
+          <i class="fa fa-star" aria-hidden="true"></i> <span id="stars"></span>
         </div>
         <div class="col-md-3">
           <i class="fa fa-code-fork" aria-hidden="true"></i> <span id="forks"></span>
@@ -63,53 +42,35 @@
 
 
       <div class="row bottom">
-
-<<<<<<< HEAD
-        <div class="col-md-3 last_issue">
+        <!-- Activities -->
+        <div class="col-md-4">
           <h1>Activity</h1>
-          <h2 id="last_issue_1">Loading...</h2>
-          <h2 id="last_issue_2">Loading...</h2>
-          <h2 id="last_issue_3">Loading...</h2>
+          <!--Card-->
+          <div class="cards-notif"></div>
+          <div class="card">
+            <div class="row">
+              <!-- Exclamation icon -->
+              <div class="col-md-1 issue-icon card-icon">
+                <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+              </div>
+              <!-- Message -->
+              <div class="col-md-11">
+                <h2 id="last-issue">Make editor toggle settings only work when an editor is actively focused</h2>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <div class="col-md-3 pull-request">
+        <!-- Notifications -->
+        <div class="col-md-4 pull-request">
           <h1>Notifications</h1>
           <h2 id="notif">Nothing new</h2>
         </div>
 
-        <div class="col-md-6 pull-right gitter">
+        <!-- Gitter -->
+        <div class="col-md-4 pull-right gitter">
           <iframe id="gitter" src="https://gitter.im/jupyter/jupyterlab/~embed" align="right">
           </div>
-=======
-    <!-- Activity -->
-    <div class="col-md-4">
-      <h1>Activity</h1>
-      <!--Card-->
-      <div class="cards-notif"></div>
-      <div class="card">
-        <div class="row">
-          <!-- Exclamation icon -->
-          <div class="col-md-1 issue-icon card-icon">
-            <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
-          </div>
-          <!-- Message -->
-          <div class="col-md-11">
-            <h2 id="last-issue">Make editor toggle settings only work when an editor is actively focused</h2>
-          </div>
-        </div> 
-      </div>
-    </div>
-
-    <!-- Notifications -->
-    <div class="col-md-4 PR">
-        <h1>Notifications</h1>
-    </div>
-
-    <!-- Gitter -->
-    <div class="col-md-4 pull-right gitter">
-    
-    </div>
->>>>>>> style
 
         </div>
 

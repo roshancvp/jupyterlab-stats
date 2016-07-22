@@ -19,7 +19,9 @@ $(document).ready(function(){
 function popup(stuff){
   $('.wrap, a').toggleClass('active');
   $("#stuff").text("Hooray! We are at star #" + stuff);
+  $('#stuff').toggleClass('hidden');
   var id = setTimeout(function() {
+    $('#stuff').toggleClass('hidden');
     $('.wrap, a').toggleClass('active');
   }, 4000);
   return false;
