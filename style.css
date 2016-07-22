@@ -1,37 +1,26 @@
 body {
-  font-family: 'Myriad Pro', 'Helvetica Neue', 'Arial', sans-serif;
+  font-family: 'Helvetica Neue', 'Arial', sans-serif;
   color: #616161;
   background-color: #E4E4E4;
+}
+.logo {
+    margin: 0px;
 }
 
 .container {
   min-width: 1800px;
 }
 
-.top {
-  margin-top: 50px;
-  font-size: 32px;
-}
-
 .bottom {
   padding-top: 50px;
 }
 
-.icons {
-  margin-top: 50px;
-  font-size: 72px;
+.icon > img{
+  height: 50px;
 }
 
-.fa-star {
-
-}
-
-.fa-code-fork {
-
-}
-
-.fa-exclamation-circle {
-
+.icon > span {
+    font-size: 50px
 }
 
 h1 {
