@@ -83,10 +83,15 @@ var pullChanges = function() {
     $('.cards-activity').prepend(createCard(jsonPR[0].title, jsonPR[0].user.login));    
     lastPRID = jsonPR[0].number;
   }
+  
+  //Pull Requests 
+  for(i = jsonPulls.length - 1; i >= 0; i--){
+    $('.cards-pulls').prepend(createCard(jsonPulls[i].title, jsonPulls[i].user.login));
+  }
 
 }
 
-var createCard = function(text, user) {
+var createCard = function(text, user, type) {
   var htmlText = `
     <div class="card">
       <div class="row">
