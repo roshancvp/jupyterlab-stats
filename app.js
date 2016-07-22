@@ -5,15 +5,18 @@ console.log("Starting...")
 var prevStars;
 var prevForks;
 var prevIssues;
+var lastPRID;
+var loopCount = 0;
 
 $(document).ready(function(){
 
-  pullChanges()
+  pullChanges();
 
   setInterval(function() {
     pullChanges();
-  }, 60000)
-
+    loopCount++;
+    console.log(loopCount);
+  }, 5000);
 });
 
 function popup(stuff){
@@ -79,35 +82,34 @@ var pullChanges = function() {
 
   var jsonPR = JSON.parse(requestPR.responseText);
   // Works only if there is one new notification
-  var lastPRID;
 
-  var createCard = function(text, user) {
-    var htmlText = `
-    <div class="card">
-    <div class="row">
-    <!-- Icon -->
-    <div class="col-md-1 issue-icon card-icon">
-    <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
-    </div>
-    <!-- Message -->
-    <div class="col-md-11">
-    <h2 id="last-issue">` + text + `</h2><br>
-    <h3 class="card-user">` + user + `</h3>
-    </div>
-    </div>
-    </div>`;
-    return htmlText;
-  }
-
-  if (lastPRID == null){
+  if (lastPRID == null) {
     for (x = 5; x >= 0; x--) {
       $('.cards-activity').prepend(createCard(jsonPR[x].title, jsonPR[x].user.login));
     }
-    var lastPRID = jsonData[0].number;
+    lastPRID = jsonPR[0].number;
   }
 
-  if(lastPRID != jsonData[0].number) {
+  if (lastPRID != jsonPR[0].number) {
     $('.cards-activity').prepend(createCard(jsonPR[0].title, jsonPR[0].user.login));
-    var lastPRID = jsonData[0].number;
+    lastPRID = jsonPR[0].number;
   }
+}
+
+var createCard = function(text, user) {
+  var htmlText = `
+  <div class="card">
+  <div class="row">
+  <!-- Icon -->
+  <div class="col-md-1 issue-icon card-icon">
+  <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+  </div>
+  <!-- Message -->
+  <div class="col-md-11">
+  <h2 id="last-issue">` + text + `</h2><br>
+  <h3 class="card-user">` + user + `</h3>
+  </div>
+  </div>
+  </div>`;
+  return htmlText;
 }
