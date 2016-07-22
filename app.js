@@ -16,6 +16,15 @@ $(document).ready(function(){
 
 });
 
+function popup(stuff){
+  $('.wrap, a').toggleClass('active');
+  $("#stuff").text("Hooray! We are at star #" + stuff);
+  var id = setTimeout(function() {
+    $('.wrap, a').toggleClass('active');
+  }, 4000);
+  return false;
+}
+
 var pullChanges = function() {
 
   // Pull Requests
@@ -24,8 +33,8 @@ var pullChanges = function() {
   requestPulls.send();
 
   // Stargazers + Issues + Forks
-  var jsonPulls = JSON.parse(requestPulls.responseText)
-  $('#pull').text(jsonPulls.length)
+  var jsonPulls = JSON.parse(requestPulls.responseText);
+  $('#pull').text(jsonPulls.length);
 
   var requestData = new XMLHttpRequest();
   requestData.open("GET", BASE, false);
@@ -51,6 +60,7 @@ var pullChanges = function() {
   if (prevStars < stars) {
     $('#notif').text("NEW STAR :D");
     prevStars = stars;
+    popup(stars);
   } else if (prevStars > stars) {
     $('#notif').text("LOST STAR :(");
     prevStars = stars;
