@@ -50,6 +50,9 @@ var pullChanges = function() {
   // Check Stars
   if (prevStars < stars) {
     $('#notif').text("NEW STAR :D");
+    $(".fa-star").animate({
+      height: '150px',
+    });
     prevStars = stars;
   } else if (prevStars > stars) {
     $('#notif').text("LOST STAR :(");

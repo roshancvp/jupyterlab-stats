@@ -2,25 +2,22 @@
 <html>
 <head>
   <title>JupyterLab Stats</title>
-  <script   src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/octicons/3.5.0/octicons.css" rel="stylesheet" crossorigin="anonymous">
-
-
-
-
+  <!-- Custom -->  
   <link rel="stylesheet" type="text/css" href="style.css">
-  <script src="app.js"></script>
+  
 </head>
 <body>
 <div class="container">
 
-  <div class="top text-center">
-  <img src="logo.svg" style="height: 64px;">
-  <br>at Cal Poly San Luis Obispo
-  </div>
+  <!--Top level logo-->
+  <img class="top" src="logo.svg" style="height: 100px;">
 
   <div class="row icons text-center">
     <div class="col-md-3">
@@ -42,21 +39,19 @@
   <div class="row bottom">
 
     <div class="col-md-4 last_issue">
-      <h1>Activity:</h1>
+      <h1>Activity</h1>
       <h2 id="last_issue_1">Loading...</h2>
       <h2 id="last_issue_2">Loading...</h2>
       <h2 id="last_issue_3">Loading...</h2>
     </div>
 
     <div class="col-md-4 PR">
-      <div class="col-md-4 last_issue">
-        <h1>Notifications:</h1>
+        <h1>Notifications</h1>
         <h2 id="notif">Nothing new</h2>
-      </div>
     </div>
 
     <div class="col-md-4 pull-right gitter">
-      <iframe id="gitter" src="https://gitter.im/jupyter/jupyterlab/~embed" align="right">
+      <iframe id="gitter" src="https://gitter.im/jupyter/jupyterlab/~embed" align="right"></iframe>
     </div>
 
   </div>
