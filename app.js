@@ -5,7 +5,7 @@ console.log("Starting...")
 var prevStars;
 var prevForks;
 var prevIssues;
-var lastPRID;
+var lastIssueID;
 var loopCount = 0;
 
 $(document).ready(function(){
@@ -17,7 +17,7 @@ $(document).ready(function(){
     pullChanges();
     loopCount++;
     console.log(loopCount);
-  }, 5000);
+  }, 60000);
 
 });
 
@@ -64,25 +64,29 @@ var pullChanges = function() {
   
   /* End of Notifications */
 
-  // Activity
-  var requestPR = new XMLHttpRequest();
-  requestPR.open("GET", BASE + "/issues", false);
-  requestPR.send();
+  // Issues
+  var requestIssues = new XMLHttpRequest();
+  requestIssues.open("GET", BASE + "/issues", false);
+  requestIssues.send();
 
-  var jsonPR = JSON.parse(requestPR.responseText);
+  var jsonIssue = JSON.parse(requestIssues.responseText);
 
   // Works only if there is one new notification
-  if (lastPRID == null){
+  if (lastIssueID == null){
     for (x = 5; x >= 0; x--) {
-    $('.cards-activity').prepend(createCard(jsonPR[x].title, jsonPR[x].user.login));    
+			if(jsonIssue[x].html_url.search('issue') > 0){
+				$('.cards-issues').prepend(createCard(jsonIssue[x].title, jsonIssue[x].user.login, 'issue'));  
+			}
     }
-    lastPRID = jsonPR[0].number;
+    lastIssueID = jsonIssue[0].number;
   } 
-  
-  if(lastPRID != jsonPR[0].number) {
-    $('.cards-activity').prepend(createCard(jsonPR[0].title, jsonPR[0].user.login));    
-    lastPRID = jsonPR[0].number;
+  		
+  if(lastIssueID != jsonIssue[0].number && jsonIssue[0].html_url.search('issue') > 0) {
+    $('.cards-issues').prepend(createCard(jsonIssue[0].title, jsonIssue[0].user.login, 'issue'));    
+    lastIssueID = jsonIssue[0].number;
   }
+	
+	/* End of Issues */
   
   //Pull Requests 
   for(i = jsonPulls.length - 1; i >= 0; i--){
@@ -92,7 +96,9 @@ var pullChanges = function() {
 }
 
 var createCard = function(text, user, type) {
-  var htmlText = `
+  
+	if(type == 'issue'){
+	var htmlText = `
     <div class="card">
       <div class="row">
         <!-- Icon -->
@@ -105,6 +111,24 @@ var createCard = function(text, user, type) {
           <h3 class="card-user">` + user + `</h3>
         </div>
       </div>
+    </div>`;		
+	} else {
+			var htmlText = `
+    <div class="card">
+      <div class="row">
+        <!-- Icon -->
+        <div class="col-md-1 issue-icon card-icon">
+          <img src="icons/merge.png">
+        </div>
+        <!-- Message -->
+        <div class="col-md-11">
+          <h2 id="last-issue">` + text + `</h2><br>
+          <h3 class="card-user">` + user + `</h3>
+        </div>
+      </div>
     </div>`;
+	}
+		
+	
   return htmlText;
 }
