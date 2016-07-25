@@ -28,7 +28,7 @@ h4 {
 }
 
 .header {
-  padding: 20px 0 20px 70px;
+  padding: 20px 0 20px 85px;
   background-color: #cecece;
   margin: 0;
 }
@@ -208,12 +208,20 @@ a.button.active {
 }
 
 #gitter {
-  height: 100%;
-  width: 100%;
+  height: 57.143%;
+  width: 57.143%;
   border: none;
   align-self: center;
-  border-radius: 5px;
+  border-radius: 2.857px;
   box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16);
+
+  zoom: 1.75;
+    -moz-transform:scale(1.75);
+    -moz-transform-origin: 0 0;
+    -o-transform: scale(1.75);
+    -o-transform-origin: 0 0;
+    -webkit-transform: scale(1.75);
+    -webkit-transform-origin: 0 0;
 }
 
 .colcontainer {
