@@ -201,7 +201,7 @@ a.button.active {
   font-weight: 200;
   background-color: white;
   padding: 10px;
-  margin: 15px 15px;
+  margin: 15px 12px;
   border-radius: 5px;
   font-size: 20px;
   box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16);
@@ -225,7 +225,7 @@ a.button.active {
 
 .colcontainer {
     width: 33.333333333333333333%;
-    height: 100%;
+    height: calc(100% - 213px);
     overflow-y: scroll;
     position: fixed;
 }
