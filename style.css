@@ -4,7 +4,7 @@
 }
 
 body, html {
-  font-family: "Myriad Pro", 'Helvetica Neue', 'Arial', sans-serif;
+  font-family: 'Helvetica Neue', 'Arial', sans-serif;
   color: #616161;
   background-color: #E4E4E4;
   height: 100%;
@@ -52,31 +52,29 @@ h4 {
   margin-top: -20px;
 }
 
-.PR > h1 {
+h1 {
   padding: 25px 0 4px 0;
   text-align: center;
-  margin: 0;
+  margin: 0;  
   border-bottom-style: solid;
   border-bottom-width: 5px;
+  font-weight: 200;
+  font-size: 42px;
+
+}
+
+.PR > h1 {
   border-bottom-color: #A7A4FF;
+  padding-left: 70px; 
 }
 
 .ACT > h1 {
-  padding: 25px 0 4px 0;
-  text-align: center;
-  margin: 0;
-  border-bottom-style: solid;
-  border-bottom-width: 5px;
   border-bottom-color: #FFA4A4;
 }
 
 .gitter > h1 {
-  padding: 25px 0 4px 0;
-  text-align: center;
-  margin: 0;
-  border-bottom-style: solid;
-  border-bottom-width: 5px;
   border-bottom-color: #95E383;
+  padding-right: 70px;
 }
 
 .icon > span {
@@ -215,12 +213,12 @@ a.button.active {
 }
 
 #gitter {
-  height: 920px;
+  height: 100%;
   width: 100%;
   border: none;
   align-self: center;
   border-radius: 5px;
-    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16);
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16);
 }
 
 .colcontainer {
@@ -231,7 +229,7 @@ a.button.active {
 }
 
 .gitter > .colcontainer {
-    padding: 15px 12px;
+    padding: 15px 70px 15px 15px;;
 }
 
 .content {
@@ -242,3 +240,30 @@ a.button.active {
   background-color: #868C97;
   color: white;
 }
+
+.card-user {
+    font-family: 'Helvetica Neue';
+}
+
+#last-issue {
+    font-family: 'Helvetica Neue';
+    font
+}
+
+.PR .colcontainer {
+    padding-left: 70px;
+}
+
+/*
+.ACT .card {
+    background-color: #868C97;
+}
+
+.ACT .card-user {
+    color: #e4e4e4;
+}
+
+.ACT #last-issue {
+    color: white;
+}
+*/
