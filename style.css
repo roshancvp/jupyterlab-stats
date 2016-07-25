@@ -28,7 +28,7 @@ h4 {
 }
 
 .header {
-  padding: 20px 0 20px 70px;
+  padding: 20px 0 20px 85px;
   background-color: #cecece;
   margin: 0;
 }
@@ -49,11 +49,11 @@ h4 {
 }
 
 h1 {
-  padding: 25px 0 10px 0;
+  padding: 25px 0 15px 0;
   text-align: center;
   margin: 0;  
   border-bottom-style: solid;
-  border-bottom-width: 5px;
+  border-bottom-width: 7px;
   font-weight: 500;
   font-size: 42px;
 
@@ -208,12 +208,20 @@ a.button.active {
 }
 
 #gitter {
-  height: 100%;
-  width: 100%;
+  height: 57.143%;
+  width: 57.143%;
   border: none;
   align-self: center;
-  border-radius: 5px;
+  border-radius: 2.857px;
   box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16);
+
+  zoom: 1.75;
+    -moz-transform:scale(1.75);
+    -moz-transform-origin: 0 0;
+    -o-transform: scale(1.75);
+    -o-transform-origin: 0 0;
+    -webkit-transform: scale(1.75);
+    -webkit-transform-origin: 0 0;
 }
 
 .colcontainer {
