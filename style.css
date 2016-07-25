@@ -6,7 +6,7 @@
 body, html {
   font-family: 'Helvetica Neue', 'Arial', sans-serif;
   color: #616161;
-  background-color: #E4E4E4;
+  background-color: #d9d9d9;
   height: 100%;
 }
 
@@ -21,10 +21,6 @@ h4 {
   margin: 0px;
 }
 
-.logo > img {
-  height: 90px;
-}
-
 .container {
   min-width: 100%;
   margin: 0;
@@ -32,8 +28,8 @@ h4 {
 }
 
 .header {
-  padding: 20px 40px 20px 40px;
-  background-color: #D8D8D8;
+  padding: 20px 0 20px 70px;
+  background-color: #cecece;
   margin: 0;
 }
 
@@ -53,12 +49,12 @@ h4 {
 }
 
 h1 {
-  padding: 25px 0 4px 0;
+  padding: 25px 0 10px 0;
   text-align: center;
   margin: 0;  
   border-bottom-style: solid;
   border-bottom-width: 5px;
-  font-weight: 200;
+  font-weight: 100;
   font-size: 42px;
 
 }
@@ -73,7 +69,7 @@ h1 {
 }
 
 .gitter > h1 {
-  border-bottom-color: #95E383;
+  border-bottom-color: rgb(134, 214, 116);
   padding-right: 70px;
 }
 
